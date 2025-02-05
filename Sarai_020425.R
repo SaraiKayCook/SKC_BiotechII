@@ -67,3 +67,7 @@ scatter.smooth(x = USArrests$UrbanPop, y = USArrests$Murder,
                ylab = "Murder Rates",
                pch = 19,
                col = "Red")
+murder_anova <- aov(UrbanPop ~ Murder, data = USArrests)
+print(murder_anova)
+murder_lr <- lm(UrbanPop ~ Murder, data = USArrests)
+print(murder_lr)
